@@ -1,0 +1,17 @@
+CRITICAL - 2026-02-06 00:26:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/header_layout.php"
+[Method: GET, Route: auth/dashboard]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/View/View.php(475): CodeIgniter\View\View->render()
+ 3 APPPATH/Views/layout/dashboard_layout.php(12): CodeIgniter\View\View->include()
+ 4 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/layout/dashboard_layout.php')
+ 5 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 6 SYSTEMPATH/View/View.php(242): CodeIgniter\View\View->render()
+ 7 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 8 APPPATH/Controllers/Auth.php(16): view()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()

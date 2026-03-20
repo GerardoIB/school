@@ -1,0 +1,66 @@
+ERROR - 2026-02-17 21:03:14 --> mysqli_sql_exception: Table 'roles' already exists in /var/www/html/ci4/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /var/www/html/ci4/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /var/www/html/ci4/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/ci4/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/ci4/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/ci4/app/Database/Migrations/2026-02-16-191210_Register.php(29): CodeIgniter\Database\Forge->createTable()
+#5 /var/www/html/ci4/system/Database/MigrationRunner.php(874): App\Database\Migrations\Register->up()
+#6 /var/www/html/ci4/system/Database/MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /var/www/html/ci4/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /var/www/html/ci4/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#9 /var/www/html/ci4/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#10 /var/www/html/ci4/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 /var/www/html/ci4/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#12 /var/www/html/ci4/spark(87): CodeIgniter\Boot::bootSpark()
+#13 {main}
+ERROR - 2026-02-17 21:15:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATATIME NOT NULL,
+	`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	' at line 7 in /var/www/html/ci4/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /var/www/html/ci4/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /var/www/html/ci4/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/ci4/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/ci4/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/ci4/app/Database/Migrations/2026-02-16-191210_Register.php(25): CodeIgniter\Database\Forge->createTable()
+#5 /var/www/html/ci4/system/Database/MigrationRunner.php(874): App\Database\Migrations\Register->up()
+#6 /var/www/html/ci4/system/Database/MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /var/www/html/ci4/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /var/www/html/ci4/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#9 /var/www/html/ci4/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#10 /var/www/html/ci4/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 /var/www/html/ci4/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#12 /var/www/html/ci4/spark(87): CodeIgniter\Boot::bootSpark()
+#13 {main}
+ERROR - 2026-02-17 21:17:48 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in /var/www/html/ci4/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /var/www/html/ci4/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /var/www/html/ci4/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/ci4/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/ci4/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/ci4/app/Database/Migrations/2026-02-17-210114_Users.php(24): CodeIgniter\Database\Forge->createTable()
+#5 /var/www/html/ci4/system/Database/MigrationRunner.php(874): App\Database\Migrations\Users->up()
+#6 /var/www/html/ci4/system/Database/MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /var/www/html/ci4/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /var/www/html/ci4/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#9 /var/www/html/ci4/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#10 /var/www/html/ci4/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 /var/www/html/ci4/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#12 /var/www/html/ci4/spark(87): CodeIgniter\Boot::bootSpark()
+#13 {main}
+ERROR - 2026-02-17 21:18:12 --> mysqli_sql_exception: Failed to open the referenced table 'roles' in /var/www/html/ci4/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /var/www/html/ci4/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /var/www/html/ci4/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/ci4/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/ci4/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/ci4/app/Database/Migrations/2026-02-17-210114_Users.php(24): CodeIgniter\Database\Forge->createTable()
+#5 /var/www/html/ci4/system/Database/MigrationRunner.php(874): App\Database\Migrations\Users->up()
+#6 /var/www/html/ci4/system/Database/MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /var/www/html/ci4/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /var/www/html/ci4/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#9 /var/www/html/ci4/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#10 /var/www/html/ci4/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 /var/www/html/ci4/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#12 /var/www/html/ci4/spark(87): CodeIgniter\Boot::bootSpark()
+#13 {main}

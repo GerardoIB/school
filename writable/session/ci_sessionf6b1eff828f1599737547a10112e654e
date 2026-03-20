@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1772506218;pk_user|s:2:"31";fk_phone|s:10:"7121895030";password|s:60:"$2y$12$0FVqaTZq2yQNcpjpaI7DCuuvgW4yRn2lEeL/Cdk95vg9Of84ugKDK";locked|s:1:"0";fk_level|s:1:"4";created_at|s:19:"2026-03-02 17:20:10";updated_at|s:19:"2026-03-02 17:20:10";_ci_previous_url|s:48:"http://localhost:8080/ci4/index.php/user/profile";

@@ -1,0 +1,483 @@
+CRITICAL - 2026-02-04 16:05:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layouts/main_layout.php"
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/View/View.php(242): CodeIgniter\View\View->render()
+ 3 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Auth.php(7): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:05:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layouts/main_layout.php"
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/View/View.php(242): CodeIgniter\View\View->render()
+ 3 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Auth.php(7): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:36:28 --> ErrorException: include(layout/logo_layout): Failed to open stream: No such file or directory
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:36:53 --> ErrorException: include(layout/logo_layout): Failed to open stream: No such file or directory
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:36:53 --> ErrorException: include(layout/logo_layout): Failed to open stream: No such file or directory
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:36:53 --> ErrorException: include(layout/logo_layout): Failed to open stream: No such file or directory
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:36:53 --> ErrorException: include(layout/logo_layout): Failed to open stream: No such file or directory
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:30 --> ErrorException: include(): http:// wrapper is disabled in the server configuration by allow_url_include=0
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:30 --> ErrorException: include(): http:// wrapper is disabled in the server configuration by allow_url_include=0
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:30 --> ErrorException: include(): http:// wrapper is disabled in the server configuration by allow_url_include=0
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:31 --> ErrorException: include(): http:// wrapper is disabled in the server configuration by allow_url_include=0
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:31 --> ErrorException: include(): http:// wrapper is disabled in the server configuration by allow_url_include=0
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:31 --> ErrorException: include(): http:// wrapper is disabled in the server configuration by allow_url_include=0
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:32 --> ErrorException: include(): http:// wrapper is disabled in the server configuration by allow_url_include=0
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:32 --> ErrorException: include(): http:// wrapper is disabled in the server configuration by allow_url_include=0
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:32 --> ErrorException: include(): http:// wrapper is disabled in the server configuration by allow_url_include=0
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:32 --> ErrorException: include(): http:// wrapper is disabled in the server configuration by allow_url_include=0
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:33 --> ErrorException: include(): http:// wrapper is disabled in the server configuration by allow_url_include=0
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:42 --> ErrorException: include(layout/logo_layout): Failed to open stream: No such file or directory
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:43 --> ErrorException: include(layout/logo_layout): Failed to open stream: No such file or directory
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:43 --> ErrorException: include(layout/logo_layout): Failed to open stream: No such file or directory
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:44 --> ErrorException: include(layout/logo_layout): Failed to open stream: No such file or directory
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:37:57 --> ErrorException: include(layout/logo_layout): Failed to open stream: No such file or directory
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 APPPATH/Views/user/forget.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/user/forget.php(9): include()
+ 3 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/forget.php')
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 5 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Auth.php(13): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:38:15 --> Error: Call to undefined method CodeIgniter\View\View::includeinclude()
+[Method: GET, Route: auth/forget]
+in APPPATH/Views/user/forget.php on line 9.
+ 1 SYSTEMPATH/View/View.php(226): include()
+ 2 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 3 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Auth.php(13): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->forget()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:40:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/logo_layut.php"
+[Method: GET, Route: auth/register]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/View/View.php(475): CodeIgniter\View\View->render()
+ 3 APPPATH/Views/user/register.php(9): CodeIgniter\View\View->include()
+ 4 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/register.php')
+ 5 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 6 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Auth.php(10): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->register()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:40:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/logo_layut.php"
+[Method: GET, Route: auth/register]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/View/View.php(475): CodeIgniter\View\View->render()
+ 3 APPPATH/Views/user/register.php(9): CodeIgniter\View\View->include()
+ 4 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/register.php')
+ 5 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 6 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Auth.php(10): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->register()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:40:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/logo_layut.php"
+[Method: GET, Route: auth/register]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/View/View.php(475): CodeIgniter\View\View->render()
+ 3 APPPATH/Views/user/register.php(9): CodeIgniter\View\View->include()
+ 4 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/register.php')
+ 5 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 6 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Auth.php(10): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->register()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 16:40:39 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/logo_layut.php"
+[Method: GET, Route: auth/register]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/View/View.php(475): CodeIgniter\View\View->render()
+ 3 APPPATH/Views/user/register.php(9): CodeIgniter\View\View->include()
+ 4 SYSTEMPATH/View/View.php(226): include('/var/www/html/ci4/app/Views/user/register.php')
+ 5 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 6 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Auth.php(10): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->register()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 17:12:32 --> Error: Undefined constant "redirect"
+[Method: GET, Route: auth/login]
+in APPPATH/Views/user/page-login.php on line 30.
+ 1 SYSTEMPATH/View/View.php(226): include()
+ 2 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 3 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Auth.php(7): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 17:13:19 --> Error: Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+[Method: GET, Route: auth/login]
+in APPPATH/Views/user/page-login.php on line 30.
+ 1 SYSTEMPATH/View/View.php(226): include()
+ 2 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 3 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Auth.php(7): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 17:16:01 --> Error: Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+[Method: GET, Route: auth/login]
+in APPPATH/Views/user/page-login.php on line 30.
+ 1 SYSTEMPATH/View/View.php(226): include()
+ 2 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 3 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Auth.php(7): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 17:16:01 --> Error: Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+[Method: GET, Route: auth/login]
+in APPPATH/Views/user/page-login.php on line 30.
+ 1 SYSTEMPATH/View/View.php(226): include()
+ 2 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 3 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Auth.php(7): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-04 17:16:02 --> Error: Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+[Method: GET, Route: auth/login]
+in APPPATH/Views/user/page-login.php on line 30.
+ 1 SYSTEMPATH/View/View.php(226): include()
+ 2 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 3 SYSTEMPATH/Common.php(1199): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Auth.php(7): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()

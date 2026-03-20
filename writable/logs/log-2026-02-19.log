@@ -1,0 +1,133 @@
+CRITICAL - 2026-02-19 19:30:44 --> Error: Class "Levels" not found
+[Method: GET, Route: admin/levels]
+in APPPATH/Config/Routes.php on line 46.
+ 1 SYSTEMPATH/Router/RouteCollection.php(799): CodeIgniter\Router\RouteCollection->{closure:/var/www/html/ci4/app/Config/Routes.php:45}()
+ 2 APPPATH/Config/Routes.php(45): CodeIgniter\Router\RouteCollection->group()
+ 3 SYSTEMPATH/Router/RouteCollection.php(339): require('/var/www/html/ci4/app/Config/Routes.php')
+ 4 SYSTEMPATH/CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-19 19:31:56 --> Error: Class "Levels" not found
+[Method: GET, Route: admin/levels]
+in APPPATH/Config/Routes.php on line 46.
+ 1 SYSTEMPATH/Router/RouteCollection.php(799): CodeIgniter\Router\RouteCollection->{closure:/var/www/html/ci4/app/Config/Routes.php:45}()
+ 2 APPPATH/Config/Routes.php(45): CodeIgniter\Router\RouteCollection->group()
+ 3 SYSTEMPATH/Router/RouteCollection.php(339): require('/var/www/html/ci4/app/Config/Routes.php')
+ 4 SYSTEMPATH/CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-19 19:31:56 --> Error: Class "Levels" not found
+[Method: GET, Route: admin/levels]
+in APPPATH/Config/Routes.php on line 46.
+ 1 SYSTEMPATH/Router/RouteCollection.php(799): CodeIgniter\Router\RouteCollection->{closure:/var/www/html/ci4/app/Config/Routes.php:45}()
+ 2 APPPATH/Config/Routes.php(45): CodeIgniter\Router\RouteCollection->group()
+ 3 SYSTEMPATH/Router/RouteCollection.php(339): require('/var/www/html/ci4/app/Config/Routes.php')
+ 4 SYSTEMPATH/CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-19 19:31:57 --> Error: Class "Levels" not found
+[Method: GET, Route: admin/levels]
+in APPPATH/Config/Routes.php on line 46.
+ 1 SYSTEMPATH/Router/RouteCollection.php(799): CodeIgniter\Router\RouteCollection->{closure:/var/www/html/ci4/app/Config/Routes.php:45}()
+ 2 APPPATH/Config/Routes.php(45): CodeIgniter\Router\RouteCollection->group()
+ 3 SYSTEMPATH/Router/RouteCollection.php(339): require('/var/www/html/ci4/app/Config/Routes.php')
+ 4 SYSTEMPATH/CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-19 19:31:57 --> Error: Class "Levels" not found
+[Method: GET, Route: admin/levels]
+in APPPATH/Config/Routes.php on line 46.
+ 1 SYSTEMPATH/Router/RouteCollection.php(799): CodeIgniter\Router\RouteCollection->{closure:/var/www/html/ci4/app/Config/Routes.php:45}()
+ 2 APPPATH/Config/Routes.php(45): CodeIgniter\Router\RouteCollection->group()
+ 3 SYSTEMPATH/Router/RouteCollection.php(339): require('/var/www/html/ci4/app/Config/Routes.php')
+ 4 SYSTEMPATH/CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-19 19:31:57 --> Error: Class "Levels" not found
+[Method: GET, Route: admin/levels]
+in APPPATH/Config/Routes.php on line 46.
+ 1 SYSTEMPATH/Router/RouteCollection.php(799): CodeIgniter\Router\RouteCollection->{closure:/var/www/html/ci4/app/Config/Routes.php:45}()
+ 2 APPPATH/Config/Routes.php(45): CodeIgniter\Router\RouteCollection->group()
+ 3 SYSTEMPATH/Router/RouteCollection.php(339): require('/var/www/html/ci4/app/Config/Routes.php')
+ 4 SYSTEMPATH/CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-19 19:32:59 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\LevelsModel"
+[Method: GET, Route: admin/levels]
+in SYSTEMPATH/Model.php on line 819.
+ 1 SYSTEMPATH/Model.php(819): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields()
+ 2 SYSTEMPATH/BaseModel.php(819): CodeIgniter\Model->doProtectFieldsForInsert()
+ 3 SYSTEMPATH/Model.php(797): CodeIgniter\BaseModel->insert()
+ 4 APPPATH/Controllers/Levels.php(16): CodeIgniter\Model->insert()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Levels->create()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-19 19:39:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Deletes are not allowed unless they contain a "where" or "like" clause.
+[Method: GET, Route: admin/levels/0]
+in SYSTEMPATH/Database/BaseBuilder.php on line 2819.
+ 1 SYSTEMPATH/Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 2 SYSTEMPATH/BaseModel.php(1123): CodeIgniter\Model->doDelete()
+ 3 APPPATH/Controllers/Levels.php(35): CodeIgniter\BaseModel->delete()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Levels->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-19 19:42:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Deletes are not allowed unless they contain a "where" or "like" clause.
+[Method: GET, Route: admin/levels/delete/0]
+in SYSTEMPATH/Database/BaseBuilder.php on line 2819.
+ 1 SYSTEMPATH/Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 2 SYSTEMPATH/BaseModel.php(1123): CodeIgniter\Model->doDelete()
+ 3 APPPATH/Controllers/Levels.php(35): CodeIgniter\BaseModel->delete()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Levels->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-19 19:46:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Deletes are not allowed unless they contain a "where" or "like" clause.
+[Method: GET, Route: admin/levels/delete/0]
+in SYSTEMPATH/Database/BaseBuilder.php on line 2819.
+ 1 SYSTEMPATH/Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 2 SYSTEMPATH/BaseModel.php(1123): CodeIgniter\Model->doDelete()
+ 3 APPPATH/Controllers/Levels.php(38): CodeIgniter\BaseModel->delete()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Levels->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-02-19 19:51:34 --> ParseError: Unmatched '}'
+[Method: GET, Route: admin/levels/delete/0]
+in APPPATH/Controllers/Levels.php on line 51.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(885): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
