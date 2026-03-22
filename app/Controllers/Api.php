@@ -1,41 +1,50 @@
 <?php
 
 namespace App\Controllers;
-use \Config\Services;
 
-class Api extends BaseController{
+use App\Controllers\BaseController;
 
-public function telegram($mensaje){
-    $token = "8733400965:AAEyk7oOj0JVFCGUPmvlAacPwwZ-FypTl-4";
-    $chatId = "8254444833";
+class Api extends BaseController
+{
+    // Función sin parámetros para recibir la petición AJAX (POST)
+    public function telegram()
+    {
+        // 1. Cargamos tu helper de Telegram
+        // CodeIgniter buscará el archivo app/Helpers/telegram_helper.php
+        helper('telegram');
 
-    $url = "https://api.telegram.org/bot{$token}/sendMessage";
-    $cliente = \Config\Services::curlrequest();
+        // 2. Capturamos los datos enviados por el modal a través de AJAX
+        $chatId = $this->request->getPost('telegram_id');
+        $mensaje = $this->request->getPost('message');
 
-    try {
-        $response = $cliente->post($url,[
-            'form_params' =>[
-                'chat_id' => $chatId,
-                'text' => $mensaje
-            ]
-        ]);
+        // 3. Validación básica
+        if (empty($chatId) || empty($mensaje)) {
+            return $this->response->setJSON([
+                'status'  => 'error',
+                'message' => 'El destinatario y el mensaje son obligatorios.'
+            ])->setStatusCode(400);
+        }
 
-        $body = $response->getBody();
-        $status = $response->getStatusCode();
-        $result = json_decode($body, true);
+        // 4. (Opcional) Podemos usar tu función para darle un formato bonito al mensaje
+        // Si prefieres enviar el texto plano, puedes saltarte esta línea
+        $mensajeFormateado = format_telegram_message('mensaje', $mensaje, 'Profesor');
 
-        return $this->response->setJSON([
-            'success' => $result['ok'] ?? false,
-            'message' => $result['description'] ?? 'Mensaje enviado',
-            'telegram_response' => $result
-        ]);
-    } catch (\Throwable $th) {
-        return $this->response->setJSON([
-            'success' => false,
-            'error' => $th->getMessage()
-        ])->setStatusCode(500);
+        // 5. Enviamos el mensaje utilizando la función de tu helper
+        // Pasamos el Chat ID del alumno y el mensaje (o el mensaje formateado)
+        $resultado = send_telegram_to_chat($chatId, $mensajeFormateado);
+
+        // 6. Evaluamos el resultado que devuelve tu helper
+        // Tu helper devuelve un array si es exitoso, o "false" si falla
+        if ($resultado !== false) {
+            return $this->response->setJSON([
+                'status'  => 'success',
+                'message' => 'Mensaje enviado correctamente por Telegram.'
+            ]);
+        } else {
+            return $this->response->setJSON([
+                'status'  => 'error',
+                'message' => 'Error al enviar el mensaje. Revisa los logs del sistema.'
+            ])->setStatusCode(500);
+        }
     }
 }
-}
-
-

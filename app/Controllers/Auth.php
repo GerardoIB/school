@@ -45,21 +45,33 @@ class Auth extends BaseController{
         if(password_verify($data['password'],$user['password'])){
 
             $session -> set($user);
-            send_telegram("El numero ". $user['fk_phone'] . "Ha iniciado sesion");
-            if($user['fk_level'] == 1){
-            return redirect()->to(base_url('admin/dashboard'));
-            }else{
-                return redirect()->to(base_url('user/profile'));
+            print_r($user['fk_level']);
+            switch ($user['fk_level']) {
+                case '1':
+                    # code...
+                   return  redirect() -> to(base_url('admin/dashboard'));
+                    break;
+                case '2':
+                    
+                    return redirect() -> to(base_url('teacher'));
+                    break;
+                case '3':
+                    return redirect() -> to(base_url('student'));
+                    break;
+                case '4':
+                    return redirect() -> to(base_url('user/profile'));
+                    break;
+                default:
+                return redirect() -> to(base_url('auth/login'));
+                    break;
             }
-        }else{
-            return redirect()->back()->withInput()
-            ->with('mensaje_toast', 'Error: Usuario y/o contraseña incorrectos ')
-            ->with('tipo_toast', 'error');
-        }
-    }
+         //   send_telegram("El numero ". $user['fk_phone'] . " Ha iniciado sesion");
+           
+    }}
     public function registerProcess(){
         $rules = [
             'nombre'           => 'required|string|min_length[3]',
+            'telegram_chat_id' => 'permit_empty|numeric|min_length[5]',
             'apellido_paterno' => 'required|string|min_length[3]',
             'apellido_materno' => 'required|string|min_length[3]',
             'curp'             => 'required|exact_length[18]', 
@@ -81,6 +93,7 @@ class Auth extends BaseController{
         $passwordhash = password_hash($userData['password'],PASSWORD_DEFAULT);
         $personData = $this -> request -> getPost([
             'nombre',
+            'telegram_chat_id',
             'apellido_paterno',
             'apellido_materno',
             'tel',
@@ -92,6 +105,7 @@ class Auth extends BaseController{
             // Guardamos el resultado en una variable
             $personaGuardada = $personModel->insert([
                 'nombre'           => $personData['nombre'],
+                'telegram_chat_id' => $personData('telegram_chat_id'),
                 'apellido_paterno' => $personData['apellido_paterno'],
                 'apellido_materno' => $personData['apellido_materno'],
                 'pk_phone'         => $personData['tel'],
@@ -105,7 +119,7 @@ class Auth extends BaseController{
                 if($userModel->insert([
                     'fk_phone' => $personData['tel'],
                     'password' => $passwordhash, 
-                    'fk_level' => 4
+                    'fk_level' => 3
                 ])) {
                     return redirect() -> to(base_url('auth/login'))
                     ->with('toast_message','¡Registro exitoso! Ya puedes iniciar sesión.')

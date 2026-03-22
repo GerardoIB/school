@@ -5,7 +5,7 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('page_description') ?>
-    Resumen general del estado de tus contenedores y nodos.
+    Resumen general del estado de tus usuarios y asignaciones.
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -14,10 +14,17 @@
         <div class="tile">
             <div class="tile-title-w-btn">
                 <h3 class="title">Lista de Usuarios</h3>
-                <button class="btn btn-success icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#modalCrearAdmin">
-    <i class="bi  bi-plus-circle"></i> Nuevo Administrador
-</button>
+                <div class="btn-group">
+                    <a href="<?= base_url('admin/assign') ?>" class="btn btn-info icon-btn">
+                        <i class="bi bi-person-check-fill"></i> Asignar Alumnos
+                    </a>
+                    
+                    <button class="btn btn-success icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#modalCrearAdmin">
+                        <i class="bi bi-plus-circle"></i> Nuevo Administrador
+                    </button>
+                </div>
             </div>
+            
             <div class="tile-body">
                 <div class="table-responsive">
                     <table class="table table-hover table-bordered" id="sampleTable">
@@ -36,11 +43,10 @@
                                 <td><?= $u['apellido_paterno'] ?></td>
                                 <td><?= $u['pk_phone'] ?></td>
                                 <td>
-       
                                     <button class="btn btn-danger btn-sm" onclick="eliminarUsuario(<?= $u['pk_user'] ?>)"><i class="bi bi-trash"></i></button>
                                     <button class="btn btn-warning btn-sm" onclick="abrirModalEditar(<?= htmlspecialchars(json_encode($u)) ?>)">
-    <i class="bi bi-pencil-square"></i>
-</button>
+                                        <i class="bi bi-pencil-square"></i>
+                                    </button>
                                 </td>
                             </tr>
                             <?php endforeach; ?>
@@ -51,9 +57,10 @@
         </div>
     </div>
 </div>
+
 <?= $this->include('layout/modal_edit_user') ?>
- <?= $this->include('layout/sidebar_layout') ?>
- <?= $this->include('layout/modal_create_admin') ?>
+<?= $this->include('layout/sidebar_layout') ?>
+<?= $this->include('layout/modal_create_admin') ?>
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts') ?>

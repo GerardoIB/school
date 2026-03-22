@@ -11,6 +11,8 @@
     
     <?= $this->include('layout/header_layout') ?>
 
+    <?= $this -> include('layout/sidebar_layout') ?>
+
     <?= $this->include('layout/modal_create_admin') ?>
 
     <main class="app-content">

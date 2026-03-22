@@ -8,7 +8,6 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/prueba','Prueba::index');
 $routes-> get('/logout','Admin::logout');
-$routes ->get('/teacher', 'Teacher::index');
 $routes -> group('/auth', function($routes){
 
     $routes -> get('login', 'Auth::login', ['as' => 'login']);
@@ -46,7 +45,8 @@ $routes->group('/admin', ['filter' => 'role:1'], function($routes) {
     $routes->get('levels/delete/(:num)', 'Levels::delete/$1');
     $routes ->patch('update/(:num)','Admin::updateProfile/$1');
     $routes -> post('/','Admin::create');
-    
+    $routes -> get('assign','Admin::assign');
+    $routes -> post('storeAssignment', 'Admin::storeAssignment');
     // Cambié el filtro aquí para que use la misma lógica de nivel 1
     $routes->delete('users/(:num)', 'Admin::delete/$1'); 
 });
@@ -62,7 +62,22 @@ $routes -> group('product',function($routes){
     $routes -> post('update','Product::update');
 });
 
+
+
 // Rutas para Telegram
 $routes->get('/api/telegram', 'Api::telegram');
 $routes->post('/api/telegram/send', 'Api::telegram');
 
+//Rutas teacher 
+$routes -> group('/teacher',['filter'=>'role:2'], function($routes){
+    $routes -> get('/','Teacher::index');
+    $routes -> get('getAll','Teacher::getAllStudents');
+
+});
+// GRUPO STUDENT (Nivel 3 o el que le corresponda)
+$routes->group('/student', ['filter' => 'role:3'], function($routes){ // Asegúrate de poner el número de rol correcto en el filtro
+    $routes->get('/', 'Student::dashboard');
+    $routes->get('getAllTeachers', 'Student::getAllTeachers'); // <-- Nueva ruta para DataTables
+});
+
+$routes -> get("/encriptar", 'Prueba::index');

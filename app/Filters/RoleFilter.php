@@ -16,6 +16,11 @@
                     if ($userLevel == 4) {
                         return redirect()->to(base_url('user/profile'))->with('error', 'Acceso restringido a administradores.');
                     }
+
+                    if($userLevel == 2){
+                        return redirect() -> to(base_url('teacher'));
+                    }
+                    
                     
         
                     return redirect()->to(base_url('auth/login'));

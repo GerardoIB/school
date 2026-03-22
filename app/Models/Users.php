@@ -59,4 +59,53 @@ class Users extends Model
         ->get()
         ->getResultArray(); 
 }
+public function createUserWithPerson(array $personData, array $userData): bool
+    {
+        $this->db->transStart();
+
+        // 1. Insertar en persons
+        $this->db->table('persons')->insert($personData);
+
+        // 2. Insertar en users
+        $this->insert($userData);
+
+        $this->db->transComplete();
+
+        return $this->db->transStatus(); // Retorna true si todo salió bien, false si hizo rollback
+    }
+
+    /**
+     * Actualiza la información de un usuario y su persona
+     */
+    public function updateUserWithPerson(int $userId, string $phone, array $personData, array $userData = []): bool
+    {
+        $this->db->transStart();
+
+        // 1. Actualizar persons
+        $this->db->table('persons')->where('pk_phone', $phone)->update($personData);
+
+        // 2. Actualizar users (solo si hay datos, ej. nueva contraseña)
+        if (!empty($userData)) {
+            $this->update($userId, $userData);
+        }
+
+        $this->db->transComplete();
+
+        return $this->db->transStatus();
+    }
+
+    /**
+     * Elimina a un usuario desde la tabla persons (Cascada)
+     */
+    public function deleteUserAndPerson(string $phone): bool
+    {
+        $this->db->transStart();
+        
+        // Gracias al ON DELETE CASCADE, esto borrará también al user y sus relaciones
+        $this->db->table('persons')->where('pk_phone', $phone)->delete();
+        
+        $this->db->transComplete();
+
+        return $this->db->transStatus();
+    }
 }

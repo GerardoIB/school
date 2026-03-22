@@ -117,5 +117,36 @@ public function index() {
             return $this->response->setJSON(['status' => 'error', 'message' => $e->getMessage()]);
         }
     }
+    public function assign() 
+{
+    $tsModel = new \App\Models\TeacherStudentModel();
+    $userModel = new \App\Models\Users(); // Tu modelo de usuarios
+    
+    // Usamos el UserModel para traer los select (Filtramos por fk_level)
+    $data['teachers']    = $userModel->db->table('users u')->select('u.pk_user, p.nombre, p.apellido_paterno')
+                           ->join('persons p', 'p.pk_phone = u.fk_phone')->where('u.fk_level', 2)->get()->getResultArray();
+    
+    $data['students']    = $userModel->db->table('users u')->select('u.pk_user, p.nombre, p.apellido_paterno')
+                           ->join('persons p', 'p.pk_phone = u.fk_phone')->where('u.fk_level', 3)->get()->getResultArray();
+
+    // Llamamos al método limpio del nuevo modelo
+    $data['assignments'] = $tsModel->getAllAssignments();
+
+    return view('user/assign_students', $data);
+}
+public function storeAssignment() 
+{
+    $tsModel = new \App\Models\TeacherStudentModel();
+    
+    $t_id = $this->request->getPost('teacher_id');
+    $s_id = $this->request->getPost('student_id');
+
+    if ($tsModel->makeAssignment($t_id, $s_id)) {
+        return $this->response->setJSON(['status' => 'success', 'message' => 'Asignado correctamente']);
+    }
+
+    return $this->response->setJSON(['status' => 'error', 'message' => 'El alumno ya pertenece a este profesor']);
+}
+    
 
 }
