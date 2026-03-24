@@ -18,7 +18,19 @@ class Register extends Migration
             'gender' => ['type' => 'ENUM','constraint'=> ['hombre', 'mujer'] ],
             'birthdate' => ['type' => 'DATETIME'],
             'created_at' => ['type' => 'TIMESTAMP', 'default' => new \CodeIgniter\Database\RawSql('CURRENT_TIMESTAMP')],
-            'updated_at' => ['type' => 'TIMESTAMP', 'default' => new \CodeIgniter\Database\RawSql('CURRENT_TIMESTAMP')]
+            'updated_at' => ['type' => 'TIMESTAMP', 'default' => new \CodeIgniter\Database\RawSql('CURRENT_TIMESTAMP')],
+            'telegram_chat_id' => [
+                'type' => 'VARCHAR',
+                'constraint' => 100,
+                'null' => true,
+                'after' => 'birthdate'
+            ],
+            'telegram_username' => [
+                'type' => 'VARCHAR',
+                'constraint' => 100,
+                'null' => true,
+                'after' => 'telegram_chat_id'
+            ]
         
         ]);
         $this -> forge -> addKey('pk_phone',true);

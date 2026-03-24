@@ -9,6 +9,8 @@ $routes->get('/', 'Home::index');
 $routes->get('/prueba','Prueba::index');
 $routes-> get('/logout','Admin::logout');
 $routes -> group('/auth', function($routes){
+    $routes -> post('request-magic-link', 'Auth::requestMagicLink');
+    $routes -> get('magic-login/(:any)', 'Auth::verifyMagicLink/$1');
 
     $routes -> get('login', 'Auth::login', ['as' => 'login']);
     $routes -> get('register', 'Auth::register',  ['as' => 'formRegister']);

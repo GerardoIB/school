@@ -20,54 +20,139 @@ class Auth extends BaseController{
     }
 
     public function processLogin(){
+        helper('telegram'); // Cargas tu helper de Telegram
         $session = \Config\Services::session();
         $userModel = new Users();
+        
         $rules = [
             'phone' => 'required|min_length[10]|numeric',
             'password' => 'required|min_length[6]'
         ];
-        if(!$this -> validate($rules)){
-            return redirect() -> back() -> withInput() -> with('errors',$this -> validator ->getErrors());
+        
+        if(!$this->validate($rules)){
+            return redirect()->back()->withInput()->with('errors',$this->validator->getErrors());
         }
 
         $data = [
-            'phone' => $this -> request ->getPost('phone'),
-            'password' => $this -> request -> getPost('password')
+            'phone' => $this->request->getPost('phone'),
+            'password' => $this->request->getPost('password')
         ];
 
-        $user  = $userModel -> where('fk_phone', $data['phone']) -> first();
-       if(!$user){
-            return redirect() -> back() -> withInput() 
+        // Buscamos al usuario
+        $user = $userModel->where('fk_phone', $data['phone'])->first();
+        
+        if(!$user){
+            return redirect()->back()->withInput()
             ->with('error_usuario', 'Error: Este usuario no existe')
             ->with('type_toast', 'error');
         }
             
-        if(password_verify($data['password'],$user['password'])){
+        // VERIFICACIÓN DE CONTRASEÑA
+        if(password_verify($data['password'], $user['password'])){
+            
+            // --- INICIA LÓGICA DEL MAGIC LINK ---
+            
+            // 1. Generamos un token criptográficamente seguro
+            $token = bin2hex(random_bytes(32)); 
+            $expires = time() + 900; // Expira en 15 minutos
 
-            $session -> set($user);
-            print_r($user['fk_level']);
-            switch ($user['fk_level']) {
-                case '1':
-                    # code...
-                   return  redirect() -> to(base_url('admin/dashboard'));
-                    break;
-                case '2':
-                    
-                    return redirect() -> to(base_url('teacher'));
-                    break;
-                case '3':
-                    return redirect() -> to(base_url('student'));
-                    break;
-                case '4':
-                    return redirect() -> to(base_url('user/profile'));
-                    break;
-                default:
-                return redirect() -> to(base_url('auth/login'));
-                    break;
-            }
-         //   send_telegram("El numero ". $user['fk_phone'] . " Ha iniciado sesion");
-           
-    }}
+            // 2. Guardamos el token en la base de datos para este usuario
+            $userModel->where('fk_phone', $user['fk_phone'])->set([
+                'magic_token'   => $token,
+                'magic_expires' => $expires
+            ])->update();
+
+            // 3. Construimos el enlace mágico
+            $magicLink = base_url("auth/magic-login/" . $token);
+
+            // 4. Enviamos el enlace por Telegram. 
+            // NOTA: Ajusta los parámetros de send_telegram según como lo tengas programado en tu helper.
+            // Si tu helper requiere el ID de chat, podrías necesitar hacer un JOIN con PersonsModel para obtenerlo.
+            $mensajeTelegram = "🔐 Se solicitó un inicio de sesión.\n\nHaz clic en el siguiente enlace para entrar a tu cuenta:\n" . $magicLink;
+            
+            // Ejemplo: send_telegram($mensajeTelegram, $chat_id_del_usuario);
+            send_telegram($mensajeTelegram); 
+
+            // 5. Redirigimos al inicio de sesión avisando que revise su Telegram
+            return redirect()->to(base_url('auth/login'))
+            ->with('toast_message', '¡Contraseña correcta! Revisa tu Telegram, te hemos enviado el enlace de acceso.')
+            ->with('toast_type', 'success');
+
+        } else {
+            return redirect()->back()->withInput()
+            ->with('error_usuario', 'Error: Contraseña incorrecta')
+            ->with('tipo_toast', 'error');
+        }
+    }
+    public function requestMagicLink() {
+        $userModel = new Users();
+        $phone = $this->request->getPost('phone');
+
+        // 1. Buscamos al usuario por su teléfono
+        $user = $userModel->where('fk_phone', $phone)->first();
+
+        if (!$user) {
+            return redirect()->back()->with('error_usuario', 'Este usuario no existe')->with('tipo_toast', 'error');
+        }
+
+        // 2. Generamos un token criptográficamente seguro
+        $token = bin2hex(random_bytes(32)); // Ej: a1b2c3d4e5...
+        $expires = time() + 900; // Expira en 15 minutos (900 segundos)
+
+        // 3. Guardamos el token en la base de datos
+        $userModel->where('fk_phone', $phone)->set([
+            'magic_token'   => $token,
+            'magic_expires' => $expires
+        ])->update();
+
+        // 4. Construimos el enlace
+        $magicLink = base_url("auth/magic-login/" . $token);
+
+        // AQUI DECIDES CÓMO ENTREGARLO:
+        // Como no usas servicios externos, puedes mandarlo por Telegram si ya lo tienes configurado:
+        // send_telegram("Haz clic aquí para iniciar sesión: " . $magicLink, $user['telegram_chat_id']);
+        
+        // O para pruebas locales, lo mostramos en un mensaje Toast (no recomendado para producción por seguridad)
+        return redirect()->back()->with('toast_message', 'Link generado: ' . $magicLink)->with('toast_type', 'success');
+    }
+
+    // Procesa el clic en el Magic Link
+    public function verifyMagicLink($token) {
+        $session = \Config\Services::session();
+        $userModel = new Users();
+
+        // 1. Buscamos al usuario que tenga este token exacto
+        $user = $userModel->where('magic_token', $token)->first();
+
+        // 2. Validaciones de seguridad
+        if (!$user) {
+            return redirect()->to(base_url('auth/login'))->with('error_usuario', 'El enlace es inválido o ya fue usado.')->with('tipo_toast', 'error');
+        }
+
+        if (time() > $user['magic_expires']) {
+            // Si ya expiró, borramos el token
+            $userModel->where('id', $user['id'])->set(['magic_token' => null, 'magic_expires' => null])->update();
+            return redirect()->to(base_url('auth/login'))->with('error_usuario', 'El enlace ha expirado. Solicita uno nuevo.')->with('tipo_toast', 'error');
+        }
+
+        // 3. ¡Éxito! Iniciamos la sesión del usuario
+        $session->set($user);
+
+        // 4. Destruimos el token para que no se pueda usar dos veces (CRÍTICO)
+        $userModel->where('fk_phone', $user['fk_phone'])->set([
+            'magic_token' => null, 
+            'magic_expires' => null
+        ])->update();
+
+        // 5. Redirigimos según su rol
+        switch ($user['fk_level']) {
+            case '1': return redirect()->to(base_url('admin/dashboard'));
+            case '2': return redirect()->to(base_url('teacher'));
+            case '3': return redirect()->to(base_url('student'));
+            case '4': return redirect()->to(base_url('user/profile'));
+            default:  return redirect()->to(base_url('auth/login'));
+        }}
+
     public function registerProcess(){
         $rules = [
             'nombre'           => 'required|string|min_length[3]',
@@ -180,5 +265,12 @@ class Auth extends BaseController{
             "status"  => "error",
             "message" => "No se realizaron cambios (es posible que la contraseña sea la misma)"
         ]);
+    }
+    function generarOTP($longitud = 6) {
+        $otp = "";
+        for ($i = 0; $i < $longitud; $i++) {
+            $otp .= random_int(0, 9);
+        }
+        return $otp;
     }
 }

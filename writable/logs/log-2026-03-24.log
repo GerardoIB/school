@@ -1,0 +1,80 @@
+DEBUG - 2026-03-24 20:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-24 20:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-03-24 20:13:28 --> mysqli_sql_exception: Table 'ci4.users' doesn't exist in /var/www/html/ci4/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /var/www/html/ci4/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /var/www/html/ci4/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/ci4/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/ci4/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/ci4/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/ci4/system/BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 /var/www/html/ci4/app/Controllers/Auth.php(40): CodeIgniter\BaseModel->first()
+#7 /var/www/html/ci4/system/CodeIgniter.php(933): App\Controllers\Auth->processLogin()
+#8 /var/www/html/ci4/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/ci4/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/ci4/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/ci4/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /var/www/html/ci4/index.php(60): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-03-24 20:13:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.users' doesn't exist
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 684.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/Auth.php(40): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->processLogin()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-03-24 20:13:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.users' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Controllers/Auth.php(40): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->processLogin()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-03-24 20:13:28 --> [Caused by] mysqli_sql_exception: Table 'ci4.users' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 7 APPPATH/Controllers/Auth.php(40): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->processLogin()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+DEBUG - 2026-03-24 20:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-24 20:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-24 20:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-24 20:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-24 20:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-03-24 20:51:25 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/BaseModel.php on line 993.
+ 1 SYSTEMPATH/BaseModel.php(993): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH/Model.php(860): CodeIgniter\BaseModel->update()
+ 3 APPPATH/Controllers/Auth.php(63): CodeIgniter\Model->update()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->processLogin()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+DEBUG - 2026-03-24 20:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-24 20:53:34 --> Telegram: Mensaje enviado correctamente a 8254444833
+DEBUG - 2026-03-24 20:53:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

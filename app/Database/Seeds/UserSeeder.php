@@ -20,12 +20,12 @@ class UserSeeder extends Seeder
         ];
 
         // Limpiar e insertar roles
-        $this->db->table('roles')->truncate();
-        $this->db->table('roles')->insertBatch($roles);
+      //  $this->db->table('roles')->truncate();
+      //  $this->db->table('roles')->insertBatch($roles);
 
         // 2. Crear usuarios de prueba
         // Admin (nivel 1)
-        $adminPhone = '1111111111';
+      /*  $adminPhone = '7121895039';
         $this->db->table('persons')->insert([
             'pk_phone' => $adminPhone,
             'nombre' => 'Admin',
@@ -35,12 +35,14 @@ class UserSeeder extends Seeder
             'birthdate' => '1980-01-01',
             'telegram_chat_id' => null,
             'telegram_username' => null,
-        ]);
+        ]); */
+        $adminPhone = '7121895039';
         $this->db->table('users')->insert([
             'fk_phone' => $adminPhone,
             'password' => password_hash('admin123', PASSWORD_DEFAULT),
             'fk_level' => 1,
         ]);
+        
 
         // Crear 3 profesores (nivel 2)
         $professorPhones = [];

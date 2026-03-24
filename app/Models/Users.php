@@ -12,7 +12,7 @@ class Users extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['fk_phone','password','fk_level'];
+    protected $allowedFields    = ['fk_phone','password','fk_level','magic_token','magic_expires'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
