@@ -107,28 +107,32 @@ function format_telegram_message(string $tipo, string $contenido, ?string $remit
  */
 function _send_telegram_request(string $token, string $chatId, string $mensaje) {
     $url = "https://api.telegram.org/bot{$token}/sendMessage";
-    $cliente = \Config\Services::curlrequest();
-
+    
     try {
+        // 1. Movemos la instancia adentro del try para que si falla, no mate el script
+        $cliente = \Config\Services::curlrequest();
+
         $response = $cliente->post($url, [
             'form_params' => [
                 'chat_id' => $chatId,
                 'text' => $mensaje,
                 'parse_mode' => 'Markdown'
             ],
-            'timeout' => 30
+            // 2. Bajamos el timeout a 5 segundos. 30 segundos es mucho y Nginx podría cortar la conexión.
+            'timeout' => 5 
         ]);
 
         $result = json_decode($response->getBody(), true);
 
         if (isset($result['ok']) && $result['ok'] === true) {
-            log_message('info', "Telegram: Mensaje enviado correctamente a {$chatId}");
+            log_message('info', "Telegram: Mensaje enviado a {$chatId}");
             return $result;
         } else {
             log_message('error', 'Telegram: ' . ($result['description'] ?? 'Error desconocido'));
             return false;
         }
     } catch (\Throwable $th) {
+        // Ahora sí, cualquier error de cURL o de CodeIgniter será atrapado sin borrar tu base de datos
         log_message('error', 'Telegram error: ' . $th->getMessage());
         return false;
     }
