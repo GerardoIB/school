@@ -30,11 +30,11 @@ class Student extends BaseController
             
             // Solo mostramos el botón si el maestro tiene configurado Telegram
             if (!empty($teacher['telegram_chat_id'])) {
-                $btnTelegram = "<button class='btn btn-info btn-sm btn-telegram' 
-                                data-chatid='{$teacher['telegram_chat_id']}' 
+                $btnTelegram = "<button class='btn btn-info btn-sm btn-telegram'
+                                data-chatid='{$teacher['telegram_chat_id']}'
                                 data-name='{$teacher['nombre']} {$teacher['apellido_paterno']}'
-                                data-bs-toggle='modal' 
-                                data-bs-target='#telegramModal'>
+                                data-bs-toggle='modal'
+                                data-bs-target='#modalTelegram'>
                                 <i class='bi bi-telegram'></i> Enviar Mensaje
                                 </button>";
             } else {
